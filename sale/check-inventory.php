@@ -2,7 +2,7 @@
 
 $alert = "";
 $alert_class = "";
-$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
+
 $sql3="select *  from products where p_qty <10";
 $result3=mysqli_query($conn,$sql3);
 $data3=mysqli_fetch_assoc($result3);

@@ -1,7 +1,7 @@
-<?php include 'auth.php';
+<?php include '../auth/auth.php';
 
 $role=$_SESSION['role'];
-$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
+
 $sql="select count(*) as total from sales";
 $result=mysqli_query($conn,$sql);
 
@@ -65,13 +65,7 @@ if ($role ==0){
     <title>Dashboard</title>
 
     <!-- Custom fonts for this template-->
-    <link rel="shortcut icon" href="../assets/img/favicon.png">
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+     <? include '../public/salestyles.php'?>
 
 </head>
 <script type="text/javascript">
@@ -88,143 +82,8 @@ if ($role ==0){
 <!-- Page Wrapper -->
 <div id="wrapper">
 
-    <!-- Sidebar -->
-     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-        <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <img src="../assets/img/logo_small.png" alt=""/>
-            </div>
-            <div class="sidebar-brand-text mx-3"><?php
-
-            if ($role==0){
-
-                    $rol='Cashier';
-                }else{
-                    $rol='Admin';
-                }
-
-                echo $rol;
-
-
-            ?></div>
-        </a>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
-<?php if($role==1){?>
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item active">
-            <a class="nav-link" href="dashboard.php">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
-        </li>
-
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            Suppliers
-        </div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-fw fa-users-cog"></i>
-                <span>Manage Suppliers</span>
-            </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Manage suppliers:</h6>
-                <a class="collapse-item" href="add-supplier">Add Supplier</a>
-                <a class="collapse-item" href="view-supplier">View Supplier</a>
-
-            </div>
-        </div>
-        </li>
-
-        <!-- Nav Item - Utilities Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                <i class="fas fa-fw fa-list-ul"></i>
-                <span>Products</span>
-            </a>
-            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Manage Products:</h6>
-                    <a class="collapse-item" href="add-product.php?product-code=<?php echo $pdcode?>">Add Product</a>
-                    <a class="collapse-item" href="product-catalogue.php">Add new product catalogue</a>
-                    <a class="collapse-item" href="view-product.php">View Products</a>
-                    <a class="collapse-item" href="category.php">Add Product category</a>
-                    <a class="collapse-item" href="view-categories.php">Manage category</a>
-                    <a class="collapse-item" href="">View Product stats</a>
-
-                </div>
-            </div>
-        </li>
-<?php }?>
-        <!-- Divider -->
-        <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            SALE
-        </div>
-
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="sale.php?invoice=<?php echo $invcode?>" aria-controls="collapsePages">
-                <i class="fas fa-fw fa-shopping-cart"></i>
-                <span>Sale</span>
-            </a>
-
-        </li>
-        <?php if($role==1){?>
-        <!-- Nav Item - Charts -->
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Reports
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed"  data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                    <i class="fas fa-fw fa-file-excel"></i>
-                    <span>Reports</span>
-                </a>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                         <h6 class="collapse-header">View Reports :</h6>
-                        <a class="collapse-item" href="sale-report">Sales Report</a>
-                        <a class="collapse-item" href="View-supplierstats">Supplies Reports</a>
-                        <a class="collapse-item" href="view-prodstats.php">Product Reports
-                        <a class="collapse-item" href="unsale.php">Uncompleted sale Orders</a>
-
-                    </div>
-                </div>
-            </li>
-            <hr class="sidebar-divider">
-        <!-- Nav Item - Tables -->
-        <li class="nav-item">
-            <a class="nav-link" href="manage-users.php">
-                <i class="fas fa-fw fa-user-edit"></i>
-                <span>Manage users</span></a>
-        </li>
-<?php }?>
-        <!-- Divider -->
-        <hr class="sidebar-divider d-none d-md-block">
-
-        <!-- Sidebar Toggler (Sidebar) -->
-        <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div>
-
-    </ul>
+     <!-- Sidebar -->
+<? include '../navs/sidenav.php'?>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -471,40 +330,8 @@ if ($role ==0){
 </a>
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger" href="logout">Logout</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-<!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
-
-<!-- Page level plugins -->
-<script src="vendor/chart.js/Chart.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="js/demo/chart-area-demo.js"></script>
-<script src="js/demo/chart-pie-demo.js"></script>
+<? include '../navs/logoutmodal.php'?><!-- Bootstrap core JavaScript-->
+<? include '../public/salescripts.php'; ?>
 
 </body>
 

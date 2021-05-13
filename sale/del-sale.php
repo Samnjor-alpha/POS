@@ -2,7 +2,7 @@
 
 $msg = "";
 $msg_class = "";
-$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
+
 
 $id = $_GET['delete-sale'];
 $code=$_GET['p_id'];
