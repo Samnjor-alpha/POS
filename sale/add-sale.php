@@ -22,7 +22,7 @@ $tcncode='ORD'.createOrdCode();
 
 $msg = "";
 $msg_class = "";
-$conn = mysqli_connect("localhost", "root", "", "pos");
+$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
 
 
 if (isset($_POST['sale'])) {

@@ -2,7 +2,7 @@
 
 $msg = "";
 $msg_class = "";
-$conn = mysqli_connect("localhost", "root", "", "pos");
+$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
 $role=$_SESSION['role'];
 if($role=1){
     $rolee="admin";

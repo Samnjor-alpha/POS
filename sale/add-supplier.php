@@ -320,7 +320,7 @@ $pdcode='PCT-'.createProductCode();
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                                <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                                 $categ_results = mysqli_query($conn, "SELECT * FROM categories");
                                                 ?>
                                                 <select  name="categ" class="form-control form-control-user">

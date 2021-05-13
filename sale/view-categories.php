@@ -263,7 +263,7 @@ include 'add-categ.php';?>
 
                                         </tr>
                                         </thead>
-                                        <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                        <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                         $categ_results = mysqli_query($conn, "SELECT * FROM categories");
                                         ?>
 

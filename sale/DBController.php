@@ -2,10 +2,10 @@
 
 class DBController
 {
-    private $host = "localhost";
-    private $user = "root";
-    private $password = "";
-    private $database = "pos";
+    private $host = "remotemysql.com";
+    private $user = "x4dgwqYFZD";
+    private $password = "trmhipYfns";
+    private $database = "x4dgwqYFZD";
 
     private $conn;
 

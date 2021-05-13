@@ -23,7 +23,7 @@ $pdcode='PCT-'.createProductCode();
 
 $msg = "";
 $msg_class = "";
-$conn = mysqli_connect("localhost", "root", "", "pos");
+$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
 $sup= $_GET['edit-category'];
 $sql = mysqli_query($conn, "SELECT * FROM suppliers WHERE id='$sup'");
 $s_row = $sql->fetch_assoc();
@@ -361,7 +361,7 @@ $address=stripslashes($_POST['address']);
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                                <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                                 $categ_results = mysqli_query($conn, "SELECT * FROM categories");
                                                 ?>
                                                 <select  name="categ" class="form-control form-control-user">
@@ -401,7 +401,7 @@ $address=stripslashes($_POST['address']);
 
                                         </tr>
                                         </thead>
-                                        <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                        <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                         $s_results = mysqli_query($conn, "SELECT * FROM Suppliers");
                                         ?>
 

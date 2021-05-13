@@ -305,7 +305,7 @@ if ($role ==0){
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                                <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                                 $p_results = mysqli_query($conn, "SELECT * FROM p_menu");
                                                 ?>
                                                 <select  name="p_name" class="form-control form-control-user" required>
@@ -319,7 +319,7 @@ if ($role ==0){
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                                <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                                 $categ_results = mysqli_query($conn, "SELECT * FROM categories");
                                                 ?>
                                                 <select  name="categ" class="form-control form-control-user" required>
@@ -334,7 +334,7 @@ if ($role ==0){
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                                <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                                 $s_results = mysqli_query($conn, "SELECT * FROM suppliers");
                                                 ?>
                                                 <select  name="biz" class="form-control form-control-user" required>

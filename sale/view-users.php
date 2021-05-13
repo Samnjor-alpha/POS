@@ -312,7 +312,7 @@ if ($role ==0){
 
                                         </tr>
                                         </thead>
-                                        <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                        <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                         $id=$_SESSION['id'];
                                         $ad=1;
                                         $s_results = mysqli_query($conn, "SELECT * FROM admin where not id='$id'and not id='$ad'");

@@ -46,7 +46,7 @@ if ($role ==0){
 }
 $msg = "";
 $msg_class = "";
-$conn = mysqli_connect("localhost", "root", "", "pos");
+$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
 $u_id=$_GET['edit-category'];
 
 $sqlu = mysqli_query($conn, "SELECT * FROM admin WHERE id='$u_id'");

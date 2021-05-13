@@ -71,7 +71,7 @@ $tcncode = 'ORD' . createOrdCode();
 
 $msg = "";
 $msg_class = "";
-$conn = mysqli_connect("localhost", "root", "", "pos");
+$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
 
 $invs = $_GET['invoice'];
 if (isset($_POST['sale'])) {
@@ -458,7 +458,7 @@ if (isset($_POST['sale'])) {
                                     <div class="row">
 
                                         <div class="col-8">
-                                            <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                            <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                             $p_results = mysqli_query($conn, "SELECT * FROM products");
 
                                             ?>
@@ -598,7 +598,7 @@ if (isset($_POST['sale'])) {
                                     </tbody>
                                 </table>
 <?php
-$conn = mysqli_connect("localhost", "root", "", "pos");
+$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
 $idc=$_GET['invoice'];
 $sql2="select count(*) as total from sales_order where invoice='$idc'";
 $result2=mysqli_query($conn,$sql2);

@@ -3,7 +3,7 @@
 $role=$_SESSION['role'];
 
 
-$conn = mysqli_connect("localhost", "root", "", "pos");
+$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
 $sql="select count(*) as total from sales";
 $result=mysqli_query($conn,$sql);
 $data=mysqli_fetch_assoc($result);
@@ -377,7 +377,7 @@ if ($role ==0){
                         <div class="col-12">
                             <form action="" method="post">
                             <div class="form-group">
-                                <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                 $s_results = mysqli_query($conn, "SELECT * FROM suppliers");
                                 ?>
                                 <label for="biz">Supplier</label>

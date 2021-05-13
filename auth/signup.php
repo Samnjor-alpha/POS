@@ -171,7 +171,7 @@
                             <div class="section">
 
 
-                                    <button type="submit" name="reg" class="btn btn-block btn-bordered btn-primary">I Accept - Create Account
+                                    <button type="submit" name="reg" class="btn btn-block btn-bordered btn-primary">Create Account
                                     </button>
 
                             </div>

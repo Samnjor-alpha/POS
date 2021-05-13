@@ -22,7 +22,7 @@ function createProductCode() {
 $pdcode='PCT-'.createProductCode();
 $msg = "";
 $msg_class = "";
-$conn = mysqli_connect("localhost", "root", "", "pos");
+$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
 $categ = $_GET['edit-category'];
 $sql = mysqli_query($conn, "SELECT * FROM categories WHERE id='$categ'");
 $c_row = $sql->fetch_assoc();
@@ -321,7 +321,7 @@ if (isset($_POST['u_c'])) {
 
                                         </tr>
                                         </thead>
-                                        <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                        <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                         $categ_results = mysqli_query($conn, "SELECT * FROM categories");
                                         ?>
 

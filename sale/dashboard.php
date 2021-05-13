@@ -3,7 +3,7 @@ include "check-inventory.php";
 $role=$_SESSION['role'];
 
 
-$conn = mysqli_connect("localhost", "root", "", "pos");
+$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
 $sql="select count(*) as total from sales";
 $result=mysqli_query($conn,$sql);
 $data=mysqli_fetch_assoc($result);

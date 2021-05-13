@@ -306,7 +306,7 @@ if ($role ==0){
                                     <span class="<?php echo $msg_class?>"><?php echo $msg; ?></span>
                                     <br>
                                 <?php endif; ?>
-                                <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                 $s_results = mysqli_query($conn, "SELECT * FROM sales_order where complete='0'");
 
                                 if (mysqli_num_rows($s_results) <1) {

@@ -327,7 +327,7 @@ if ($role ==0){
 
                                         </tr>
                                         </thead>
-                                        <?php $conn = mysqli_connect("localhost", "root", "", "pos");
+                                        <?php $conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
                                         $s_results = mysqli_query($conn, "SELECT * FROM products");
                                         ?>
 

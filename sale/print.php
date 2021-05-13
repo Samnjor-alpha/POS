@@ -1,7 +1,7 @@
 <?php include 'auth.php';
 
 $role=$_SESSION['role'];
-$conn = mysqli_connect("localhost", "root", "", "pos");
+$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
 
 $invoice = $_GET['invoice'];
 
