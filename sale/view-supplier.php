@@ -105,7 +105,7 @@
                                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                             <a class="dropdown-item" href=""><span class="fa fa-envelope"> Send Email</a>
                                                             <a class="dropdown-item" href="edit-supplier.php?edit-category=<?php echo $c_row['id']; ?>"><span class="fa fa-edit"></span> Edit</a>
-                                                            <a class="dropdown-item" href="del-supplier.php?delete_s=<?php echo $c_row['id']; ?>"><span class="fa fa-trash"></span> Delete</a>
+                                                            <a class="dropdown-item" href="../helpers/del-supplierhelper.php?delete_s=<?php echo $c_row['id']; ?>"><span class="fa fa-trash"></span> Delete</a>
 
                                                         </div>
                                                     </div>

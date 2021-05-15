@@ -58,7 +58,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <input type="text"  name="pname" class="form-control form-control-user" placeholder="Product Name" required>
+                                                <input type="text"  name="pname" class="form-control form-control-user" placeholder="Products" required>
                                             </div>
                                         </div>
                                     </div>
