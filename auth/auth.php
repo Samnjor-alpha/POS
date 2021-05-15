@@ -2,8 +2,8 @@
 session_start();
 
 
-$conn = mysqli_connect("localhost", "root", "", "pos");
-//$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
+//$conn = mysqli_connect("localhost", "root", "", "pos");
+$conn = mysqli_connect("remotemysql.com", "x4dgwqYFZD", "trmhipYfns", "x4dgwqYFZD");
 $msg = "";
 $msg_class = "";
 if (isset($_POST['login'])) {
